@@ -12,34 +12,65 @@ body {
     background-size: cover;
     height: 100vh;
     /* Add flex properties to align left and center vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1 {
+    transform: translateX(-100%);
     font-size: 140px;
     color: white;
+    animation-fill-mode: forwards;
 }
 
 #heading1 {
     /* Add slide-in animation */
-    
+    animation: he1 700ms ease-in;
+    animation-fill-mode: forwards;
 }
-
+@keyframes he1 {
+    0%{
+        transform: translateX(-100%);
+    }
+    25%{
+        transform: translateX(-75%);
+    }
+    50%{
+        transform: translateX(-50%);
+    }
+    75%{
+        transform: translateX(-25%);
+    }
+    100%{
+        transform: translateX(-0px);
+    }
+}
 #heading2 {
     /* Add slide-in animation after delay */
-    
+    animation: he1 700ms ease-in;
+    animation-delay: 800ms;
+    animation-fill-mode: forwards;
 }
 
 #heading3 {
     /* Add slide-in animation after dealy */
-    
+    animation: he1 700ms ease-in;
+    animation-delay: 1600ms;
+    animation-fill-mode: forwards;
 }
 
 .nav {
     height: 60vh;
     /* Position on the right */
-
+    position: absolute;
+    right: 20px;
+    top: 20px;
     /* Use flex properties to space out links */
-
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
     /* Add fade-in animation after delay */
     
 }
