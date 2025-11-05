@@ -6,3 +6,132 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+
+@keyframes spins {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 100%;
+    }
+}
+
+img {
+    animation: spins 1000ms ease-in;
+}
+
+@keyframes bear {
+    0%{
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    75% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#bear:active {
+    animation: bear 1000ms;
+}
+
+@keyframes ele {
+    0%{
+        opacity: 100%;
+        scale: 100%
+    }
+    25%{
+        opacity: 75%;
+        scale: 75%
+    }
+    50%{
+        opacity: 50%;
+        scale: 50%
+    }
+    75%{
+        opacity: 25%;
+        scale: 25%
+    }
+    100%{
+        opacity: 0%;
+        scale: 0%
+    }
+}
+
+#elephant:active {
+    animation: ele 2000ms;
+}
+
+@keyframes gir {
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(-20deg) translateY(30px);
+    }
+    66%{
+        transform: rotate(10deg) translateY(-30px);
+    }
+    100%{
+        transform: rotate(1deg) translateY(1px);
+    }
+}
+
+#giraffe:active {
+    animation: gir 2000ms;
+}
+
+@keyframes hippo {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform:  translateY(-15px);
+    }
+    50% {
+       transform: translateY(-30px);
+    }
+    75% {
+       transform:  translateY(-15px);
+    }
+    100% {
+       transform: translateY(0px);
+    }
+}
+
+#hippo:active {
+    animation: hippo 500ms;
+}
+
+@keyframes ti {
+    0%{
+        transform: translateX(-400px) translateY(200px)
+        rotate(180deg);
+    }
+    25%{
+        transform: translateX(-300px) translateY(150px)
+        rotate(120deg);
+    }
+    50%{
+        transform: translateX(-200px) translateY(100px)
+        rotate(60deg);
+    }
+    75%{
+        transform: translateX(-100px) translateY(50px)
+        rotate(10deg);
+    }
+    100%{
+        transform: translateX(00px) translateY(0px)
+        rotate(0deg);
+    }
+}
+
+#tiger:active {
+    animation: ti 300ms;
+}
